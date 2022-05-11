@@ -1,0 +1,44 @@
+.body{
+    margin:0;
+    padding:0;
+    
+}
+.flex{
+    display: flex;
+}
+.selectionPage{
+    height: 100vh;
+    background: url("../../images/homebg.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+
+}
+.bookRideBtn{
+        background-color: blueviolet;
+        position: absolute;
+        top: 15%;
+        left: 25%;
+        padding: 60px;
+        border: 0;
+        border-radius: 10px;
+        color: white;
+        font-size: 26px;
+        text-decoration: none;
+}
+.offerRideBtn{
+    background-color:orange;
+    position: absolute;
+    top: 15%;
+    left: 48%;
+    padding: 60px;
+    border: 0;
+    border-radius: 10px;
+    color: white;
+    font-size: 26px;
+    text-decoration: none;
+}
+.bookRideBtn:hover,.offerRideBtn:hover{
+    transition: 0.5s ease-in-out;
+    font-size: 20px;
+    background: green;
+}
