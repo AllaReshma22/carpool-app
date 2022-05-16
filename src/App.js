@@ -1,20 +1,24 @@
 import './App.css';
-import React from "react";
-import './index.css';
-import { BrowserRouter as Router, Routes, Route,} from 'react-router-dom';
-import LogIn from "./pages/login/login.jsx"
-import SignUp from "./pages/signup/signup.jsx"
-import Choose from "./pages/choose/choose.jsx"
+import SignUp from './components/SignUpPage';
+import LoginPage from './components/LoginPage';
+import BookCard  from './components/BookARide';
+import OptionsPage from './components/OptionsPage';
+
+import {BrowserRouter,Route , Routes,} from 'react-router-dom';
+
 function App() {
   return (
-    <Router>
+    <div>
+    <BrowserRouter>
       <Routes>
-        <Route exact path='/' element={<LogIn/>}></Route>
-        <Route exact path='/signup' element={<SignUp/>}></Route>
-        <Route exact path='/selection' element={<Choose/>}></Route>
+      <Route exact path="/" element={<SignUp />} />
+      <Route exact path="/login" element={<LoginPage />} />
+      <Route exact path="/options" element={<OptionsPage />} />
+      <Route exact path="/BookRide" element={<BookCard/>} />
+      <Route exact path="/OfferRide" element={<BookCard/>} />
       </Routes>
-    </Router>
+      </BrowserRouter>
+    </div>
   );
 }
-
 export default App;

@@ -1,0 +1,36 @@
+.Page
+{
+    height: 94vh;
+    width: 100vw;
+    /*background-size: cover;*/
+    /*background: no-repeat;*/
+}
+.bookRideBtn{
+    background-color: blueviolet;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    padding: 60px;
+    border: 0;
+    border-radius: 10px;
+    color: white;
+    font-size: 26px;
+    text-decoration: none;
+}
+.offerRideBtn{
+background-color:orange;
+position: absolute;
+top: 20%;
+left: 55%;
+padding: 60px;
+border: 0;
+border-radius: 10px;
+color: white;
+font-size: 26px;
+text-decoration: none;
+}
+.bookRideBtn:hover,.offerRideBtn:hover{
+transition: 0.5s ease-in-out;
+font-size: 20px;
+background: green;
+}
