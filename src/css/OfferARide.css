@@ -1,0 +1,130 @@
+.Bookcard{
+    margin-Left:3%;
+    margin-top: 4%;
+    border:solid 1px;
+    z-index:99; 
+       border-Color:silver;
+       border-Radius:5px ;  
+       display:flex;
+       height:500px;
+       flex-Direction:column;
+       width:300px;
+       padding-Bottom:30px;
+       padding-Right:30px;
+       padding-Left:20px;
+}
+.logo{
+   position:relative;
+   left:-45vw;
+   top:2%;
+}
+.main{
+   background-image: url("../images/applicationbg.png");
+   z-index: -1;
+   background-repeat: no-repeat;
+   background-position: bottom;
+   height:99vh;
+}
+h2{
+   width:fitContent;height:fitContent; margin-Bottom:"0px";
+}
+.detailsForm{
+  display:flex;flex-Direction:column;margin-Top:15px;
+}
+.timings{
+   display:flex;flex-Wrap:wrap;margin-Top:10px;margin-Bottom:14px ; 
+}
+
+input
+ {
+     margin-top:5px;
+     font-size:15px;
+     border:none;
+     border-bottom:silver solid 2px;
+ }
+ .detailsForm tagLine
+ {
+   color:silver;
+     margin-left: -67%;
+     font-size:x-small;
+     font-weight: bold;
+     
+ }
+ input::placeholder { 
+   font-size:14px;
+ }
+ label{
+     margin-top: 20px;
+ }
+ .detailsForm label{
+     margin-left:-89%;
+     color:silver;
+     font-size:x-small;
+     font-weight: bold;
+ }
+.TimeButtons1
+{
+   width:fit-content;
+   padding:3px;
+   border-radius: 8px;
+   background-color: white;
+   border-color:purple;
+   border-width:2px;
+   margin-right:12px;
+   margin-top:5px;
+}
+.TimeButtons1:hover
+{
+   background-color:purple;
+   color: white;
+}
+.slider1
+{
+   position:fixed;
+   cursor:pointer;
+   top:18%;left:16%;
+   background-color: orange;
+   transition: .4s;
+   border-radius:25px;
+   height:30px;
+   width:60px;
+}
+.toggle
+{
+   position:relative;
+   display:inline-block;
+   width: fit-content;
+   height: fit-content;
+
+}
+.slider1 input {display:none}
+.slider1:before{
+   position: absolute;
+   content:'';
+   background-color: white;
+   transition:0.4s;
+   height:24px;
+   width:24px;
+   bottom:3px;
+   border-radius:40px;
+}
+
+input:checked+.slider1
+{
+   background-color: purple;
+}
+
+input:checked+.slider1::before
+{
+   transform :translateX(30px);
+}
+
+button[type="submit"]
+{
+   font-size: large;
+   font-weight: 600;
+   padding-top: 6px;
+   padding-bottom:6px;
+   border-radius: 20px;
+   border:none;
+}

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import "../css/BookARide.css";
+import "../css/OfferARide.css";
 import logo from "../images/logo.png"
-class BookARide extends Component()
+class OfferARide extends Component()
 {
     render(){
     return<>
@@ -10,11 +10,11 @@ class BookARide extends Component()
             <img  className="logo"src={logo} alt="logo"></img>
         <div className='Bookcard'>
         <div style={{display:"flex", flexDirection:"row", marginBottom:"0px"}}>
-            <h2>Book a  Ride</h2>
+            <h2>Offer a  Ride</h2>
             <label className="toggle" style={{alignSelf:"center"}}>
                 
                
-                <span class="slider"></span>
+                <span class="slider1"></span>
             </label>
             </div>
             <p style={{marginTop:"2px"}} className="tagLine">we get you the matches asap !</p>
@@ -43,6 +43,6 @@ class BookARide extends Component()
         </div>
         </body>
     </>
+    }
 }
-}
-export default BookARide;
+export default OfferARide;

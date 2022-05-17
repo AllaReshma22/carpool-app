@@ -1,25 +1,66 @@
+.Bookcard{
+     margin-Left:3%;
+     margin-top: 4%;
+     border:solid 1px;
+     z-index:99; 
+        border-Color:silver;
+        border-Radius:5px ;  
+        display:flex;
+        height:500px;
+        flex-Direction:column;
+        width:300px;
+        padding-Bottom:30px;
+        padding-Right:30px;
+        padding-Left:20px;
+}
+.logo{
+    position:relative;
+    left:-45vw;
+    top:2%;
+}
+.main{
+    background-image: url("../images/applicationbg.png");
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height:99vh;
+}
+h2{
+    width:fitContent;height:fitContent; margin-Bottom:"0px";
+}
+.detailsForm{
+   display:flex;flex-Direction:column;margin-Top:15px;
+}
+.timings{
+    display:flex;flex-Wrap:wrap;margin-Top:10px;margin-Bottom:14px ; 
+}
 
-input[type=text]:focus {
-    outline: none;
-  }
-  input
+ input
   {
       margin-top:5px;
       font-size:15px;
       border:none;
-      border-bottom:blue solid 2px;
+      border-bottom:silver solid 2px;
   }
-  label,#tagLine
+  .detailsForm tagLine
   {
+    color:silver;
+      margin-left: -67%;
       font-size:x-small;
       font-weight: bold;
-      color:silver
+      
   }
   input::placeholder { 
     font-size:14px;
   }
   label{
       margin-top: 20px;
+  }
+  .detailsForm label{
+      margin-left:-89%;
+      color:silver;
+      font-size:x-small;
+      font-weight: bold;
   }
 .TimeButtons
 {
@@ -39,12 +80,9 @@ input[type=text]:focus {
 }
 .slider
 {
-    position:absolute;
+    position:fixed;
     cursor:pointer;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
+    top:18%;left:16%;
     background-color: purple;
     transition: .4s;
     border-radius:25px;

@@ -1,0 +1,163 @@
+.sign-up
+{
+    color:white;
+    text-underline-offset: 6px;
+}
+body{
+    margin:0
+}
+.container
+{
+    margin:0;
+    max-width:1900px;
+    
+
+
+}
+
+hr:not([size]) {
+    height: 3px;
+    color:white;
+    text-align:center;
+    width:50px;
+    margin: 0 auto;
+     
+}
+hr{
+    color:white;
+    background-color: white;
+}
+.input-field
+{
+    height:55px;
+    width:5000px;
+    border-radius:4px;
+    border:none;
+    padding:0px 0px 0px 25px;
+    
+}
+
+.rounded-pill
+{
+    background-color: blueviolet;
+    width:30%;
+    color:white;
+    border:none;
+    height: 40px;
+}
+#log-in-submit
+{
+    background-color: orange;
+    height: 40px;
+}
+
+a{
+    cursor: pointer;
+    color:white;
+    text-decoration:none;
+
+}
+
+.Log
+{
+    text-underline-offset: 5px;
+}
+
+input:focus ~ .floating-label,
+input:not(:focus):valid ~ .floating-label{
+  top:2px;
+  bottom: 10px;
+  left: 100px;
+  font-size:12px;
+  opacity: 1;
+}
+
+.input-container
+{
+    position:relative;
+}
+.inputText {
+  font-size:16px;
+  width: 300px;
+  height: 55px;
+  padding:15px 0px 0px 7px;
+  border-radius: 4px;
+  border:none;
+}
+.floating-label {
+  position: absolute;
+  pointer-events: none;
+  left: 120px;
+  top: 17.5px;
+  transition: 0.2s ease all;
+}
+.Error
+{
+    color:white;
+    font-size: 17px;
+}
+.success-message
+{
+    font-size:20px;
+    color:Green;
+}
+.flex{
+    display:flex;
+    }
+    .intro{
+        width:70%;
+        
+    }
+  
+    
+    .signUpPage{
+        height:100vh;
+        
+    }
+    
+    .bg-img
+    {
+        width:99%;
+        height:99vh;
+    }
+    
+    .loginUpForm{
+    padding-top:60px;
+    flex-direction:column;
+    width: 30%;
+    background:blueviolet;
+    background-image: url("../images/formbg.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    }
+    .loginUpForm h1{
+        color: aliceblue;
+        text-align: center;
+        padding-bottom:10px;
+        
+    }
+    
+    .SignUp
+    {
+        
+        width: fit-content;
+        margin:auto;
+        font-weight: bold;
+        font-size:35px;
+        border:none;
+        color:white;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    }
+    .input-container::placeholder
+    {
+        padding-left: 17px;
+        font-size: 15px;
+    }
+
+
+
+
+
+

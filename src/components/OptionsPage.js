@@ -1,8 +1,10 @@
-import React from "react";
-import './OptionPage.css'
+import React, { Component } from 'react';
+import '../css/OptionsPage.css'
 import {Link} from 'react-router-dom';
-function OptionsPage()
+class OptionsPage extends Component ()
 {
+    
+    render(){
     return<>
         <div className="Page">
         <div style={{display:"flex",justifyContent:"space-between", height:"40px",marginTop:"20px",marginLeft:"40px",marginRight:"40px"}}>
@@ -15,12 +17,13 @@ function OptionsPage()
         <div style={{margin:"auto", width:"45%"}}>
                 <p style={{fontWeight:"bold", fontSize:"40px",width:"fit-content",left:"500%"}} >Hey john!</p>
                 <div>
-                <Link to="/BookRide" className="bookRideBtn">Book a ride</Link>
-                <Link to="/OfferRide" className="offerRideBtn">Offer a ride</Link>
+                <Link to="/BookARide" className="bookRideBtn">Book a ride</Link>
+                <Link to="/OfferARide" className="offerRideBtn">Offer a ride</Link>
                 </div>
         </div>
         <img src={require("../images/rideoptionsbg.png")} alt="" style={{height:"60%", zIndex:-1,width:"100vw", marginTop:"11%"}}/>
         </div>
     </>
+}
 }
 export default OptionsPage
