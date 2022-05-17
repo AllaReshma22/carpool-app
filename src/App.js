@@ -1,24 +1,40 @@
-import './App.css';
-import SignUp from './components/SignUpPage';
-import LoginPage from './components/LoginPage';
-import BookCard  from './components/BookARide';
-import OptionsPage from './components/OptionsPage';
 
-import {BrowserRouter,Route , Routes,} from 'react-router-dom';
+import './App.css';
+
+import SignUp from './components/SignUp'
+import Login from './components/Login'
+import Options from './components/OptionsPage'
+import BookARide from './components/BookARide'
+import OfferARide from './components/OfferARide'
+
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+
 
 function App() {
+  var Data=[
+    {
+        email:'reshma@gmail.com',
+        password:'reshma@123'
+    },
+    {
+        email:'spider@gmail.com',
+        password:'spider@123'
+    }
+  ]
   return (
-    <div>
-    <BrowserRouter>
-      <Routes>
-      <Route exact path="/" element={<SignUp />} />
-      <Route exact path="/login" element={<LoginPage />} />
-      <Route exact path="/options" element={<OptionsPage />} />
-      <Route exact path="/BookRide" element={<BookCard/>} />
-      <Route exact path="/OfferRide" element={<BookCard/>} />
-      </Routes>
+    <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' exact element={<SignUp Data={Data}></SignUp>} />
+          <Route path='/Login' element={<Login Data={Data}></Login>} />
+          <Route path='/OptionsPage' element={<Options Data={Data}></Options>}/>
+          <Route path='/BookARide'element={<BookARide Data={Data}></BookARide>}/>
+          <Route path='/OfferARide'element={<OfferARide Data={Data}></OfferARide>}/>
+        </Routes>
       </BrowserRouter>
+      
     </div>
   );
 }
+
 export default App;
