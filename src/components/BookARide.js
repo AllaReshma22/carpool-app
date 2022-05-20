@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import "../css/BookARide.css";
 import logo from "../images/logo.png"
-class BookARide extends Component()
+class BookARide extends Component
 {
     render(){
     return<>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../css/OptionsPage.css'
 import {Link} from 'react-router-dom';
-class OptionsPage extends Component ()
+class OptionsPage extends Component 
 {
     
     render(){
@@ -10,7 +10,7 @@ class OptionsPage extends Component ()
         <div style={{display:"flex",justifyContent:"space-between", height:"40px",marginTop:"20px",marginLeft:"40px",marginRight:"40px"}}>
             <img src={require("../images/logo.png")}alt="" style={{height:"65px"}} />
             <div style={{display:"flex",flexDirection:"row"}}>
-            <p style={{fontSize:"20px",fontWeight:"bold",alignSelf:"center"}} > John Wills </p>
+            <p style={{fontSize:"20px",fontWeight:"bold",alignSelf:"center"}} >{this.state.name}</p>
             <img src = {require("../images/user-profile.png")} alt="" style={{height:"50px",width:"50px", alignSelf:"center"}}/>
             </div>
         </div>

@@ -68,7 +68,7 @@ class Login extends Component {
                    <div class="loginUpForm flex"> 
                         <br></br>
                         <br></br>
-                        <div className='success-message'><Link to='/OptionsPage'>{this.state.message}</Link></div>
+                        <div className='success-message'><Link to='/OptionsPage' name={this.state.email}>{this.state.message}</Link></div>
                         <br></br>
                         
                         <h2 className='sign-up'><b>Log In</b></h2>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import "../css/OfferARide.css";
 import logo from "../images/logo.png"
-class OfferARide extends Component()
+class OfferARide extends Component
 {
     render(){
     return<>
@@ -12,8 +12,6 @@ class OfferARide extends Component()
         <div style={{display:"flex", flexDirection:"row", marginBottom:"0px"}}>
             <h2>Offer a  Ride</h2>
             <label className="toggle" style={{alignSelf:"center"}}>
-                
-               
                 <span class="slider1"></span>
             </label>
             </div>
