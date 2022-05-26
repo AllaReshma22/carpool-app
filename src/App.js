@@ -1,11 +1,11 @@
 
 import './App.css';
-import AllRides from './components/AllRides'
-import SignUp from './components/SignUp'
-import Login from './components/Login'
-import Options from './components/OptionsPage'
-import BookARide from './components/BookARide'
-import OfferARide from './components/OfferARide'
+import AllRides from './pages/AllRides'
+import SignUp from './pages/SignUp'
+import Login from './pages/Login'
+import Options from './pages/OptionsPage'
+import BookARide from './pages/BookARide'
+import OfferARide from './pages/OfferARide'
 import RideCard from './components/RideCard';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom'

@@ -1,8 +1,8 @@
 import React,{Component} from "react";
-import HomeComponent from "./HomeComponent";
+import HomeComponent from "../components/HomeComponent";
 import "../css/AllRides.css"
-import ProfileComponent from "./ProfileComponent"
-import RideCard from "./RideCard";
+import ProfileComponent from "../components/ProfileComponent"
+import RideCard from "../components/RideCard";
 class AllRides extends Component{
     renderBookedRides(){
     if (this.props.BookedRides.length < 1) {

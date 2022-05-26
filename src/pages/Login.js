@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import bg from '../images/img1.png'
-import '../css/login.css';
+import '../css/Login.css';
 import {Link} from 'react-router-dom'
 class Login extends Component {
     constructor(props)
@@ -13,7 +13,7 @@ class Login extends Component {
         
        
     }
-    HandleChange=(e)=>
+    handleChange=(e)=>
     {
         this.setState(
         {
@@ -23,7 +23,7 @@ class Login extends Component {
         e.preventDefault();
 
     }
-    HandleSubmit=(e)=>
+    handleSubmit=(e)=>
     {
         
         
@@ -77,14 +77,14 @@ class Login extends Component {
                         <br></br>
                         
                         <br></br>
-                        <form className="form" onSubmit={this.HandleSubmit} autoComplete="off">
+                        <form className="form" onSubmit={this.handleSubmit} autoComplete="off">
                             <div className='input-container'>
-                                <input type="text" className="inputText" placeholder="Enter Email Id" onChange={this.HandleChange} name="email" required/>
+                                <input type="text" className="inputText" placeholder="Enter Email Id" onChange={this.handleChange} name="email" required/>
         
                             </div>
                             <br></br>
                             <div className='input-container'>
-                                <input type="password" placeholder="Enter password"className="inputText"  onChange={this.HandleChange} name="password" required/>                
+                                <input type="password" placeholder="Enter password"className="inputText"  onChange={this.handleChange} name="password" required/>                
 
                             </div>
                             <br></br>

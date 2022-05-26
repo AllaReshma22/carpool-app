@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import "../css/OfferARide.css";
-import HomeComponent from "./HomeComponent";
-import ProfileComponent from "./ProfileComponent"
+import HomeComponent from "../components/HomeComponent";
+import ProfileComponent from "../components/ProfileComponent";
+import {Link} from 'react-router-dom';
 function Activator(id,selectedTime){
     var ele = document.getElementById(id).childNodes
     for(var i=0; i<ele.length; i++){
@@ -87,7 +88,7 @@ class OfferARide extends Component
                         <h2>Offer a  Ride</h2>
                      </div>
                      <h3 className='tag' >we get you the matches asap !</h3>
-                      <span class="slider1"></span>
+                      <Link to="/BookARide"><span class="slider1"></span></Link>
                     <form>
                         <label>From</label><br/>
                         <input type="text" id="from" onChange={this.Source}/><br/>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import bg from '../images/img1.png'
-import '../css/signUp.css'
+import '../css/SignUp.css'
 import {Link} from 'react-router-dom'
 class SignUp extends Component {
     constructor(props)
@@ -20,7 +20,7 @@ class SignUp extends Component {
         }
         
     }
-    HandleChange=(e)=>
+    handleChange=(e)=>
     {
        e.preventDefault(); 
         this.setState(
@@ -30,7 +30,7 @@ class SignUp extends Component {
         e.preventDefault();
         
     }
-    HandleSubmit=(e)=>
+    handleSubmit=(e)=>
     {
         if(this.state.formErrors.email==='' &&this.state.formErrors.password===''&& this.state.formErrors.confirmPassword===''){
         this.setState(
@@ -99,22 +99,22 @@ class SignUp extends Component {
            <div class="signUpForm flex">
            <div style={{marginTop:"7vh", marginBottom:"3vh",marginLeft:"5vw"}}><p className="SignUp">Si<span style={{borderBottom:"solid white 2px"}}>gn </span>Up</p></div>
             
-                        <form className="form" onSubmit={this.HandleSubmit} autoComplete="off">
+                        <form className="form" onSubmit={this.handleSubmit} autoComplete="off">
                             <div className='input-container'>
-                                <input type="text" placeholder="Enter Email Id" className="inputText" onChange={this.HandleChange}  name="email" value={this.state.email} required/>
+                                <input type="text" placeholder="Enter Email Id" className="inputText" onChange={this.handleChange}  name="email" value={this.state.email} required/>
     
                                 <p className='Error'>{this.state.formErrors.email}</p>
                             </div>
                             <div className='input-container'>
-                                <input type="password" placeholder="Enter password" className="inputText" onChange={this.HandleChange} name="password"  value={this.state.password} required/>
+                                <input type="password" placeholder="Enter password" className="inputText" onChange={this.handleChange} name="password"  value={this.state.password} required/>
                                 <p className='Error'>{this.state.formErrors.password}</p>
                             </div>
                             <div className='input-container'>
-                                <input type="password"placeholder="Confirm Password" className="inputText"onChange={this.HandleChange}  name="confirmPassword"   value={this.state.confirmPassword} required/>           
+                                <input type="password"placeholder="Confirm Password" className="inputText"onChange={this.handleChange}  name="confirmPassword"   value={this.state.confirmPassword} required/>           
                                 <p className='Error'>{this.state.formErrors.confirmPassword}</p>
                             </div>
                             <div className='button-container'>
-                                <input className="rounded-pill" type="submit"  ></input>
+                                <input className="rounded-pill" type="submit"></input>
                             </div>
                             <br></br>
                             <p style={{color:"white", margin:"auto", width:"fit-content", marginTop:"30px"}}>Already a member?<Link to='/login'  style={{ textDecoration:"none",color:"white",fontWeight:"bold",paddingLeft:"10px"}}>L<span style={{borderBottom:"solid 2px white"}}>OG</span> IN</Link></p>

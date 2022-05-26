@@ -1,9 +1,9 @@
 import React from 'react';
 import '../css/OptionsPage.css'
-import {Link,useLocation} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 
-function OptionsPage() 
+function optionsPage() 
 {
     
     return<>
@@ -27,4 +27,4 @@ function OptionsPage()
     </>
 }
 
-export default OptionsPage
+export default optionsPage
