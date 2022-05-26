@@ -1,101 +1,46 @@
-.Bookcard{
-     margin-Left:3%;
-     margin-top: 4%;
-     border:solid 1px;
-     z-index:99; 
-        border-Color:silver;
-        border-Radius:5px ;  
-        display:flex;
-        height:500px;
-        flex-Direction:column;
-        width:300px;
-        padding-Bottom:30px;
-        padding-Right:30px;
-        padding-Left:20px;
-}
-.logo{
-    position:relative;
-    left:-45vw;
-    top:2%;
-}
-.main{
-    background-image: url("../images/applicationbg.png");
-    z-index: -1;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    height:99vh;
-}
-h2{
-    width:fitContent;height:fitContent; margin-Bottom:"0px";
-}
-.detailsForm{
-   display:flex;flex-Direction:column;margin-Top:15px;
-}
-.timings{
-    display:flex;flex-Wrap:wrap;margin-Top:10px;margin-Bottom:14px ; 
-}
-
- input
+input
   {
       margin-top:5px;
       font-size:15px;
       border:none;
       border-bottom:silver solid 2px;
   }
-  .detailsForm tagLine
-  {
-    color:silver;
-      margin-left: -67%;
-      font-size:x-small;
-      font-weight: bold;
-      
-  }
   input::placeholder { 
     font-size:14px;
   }
-  label{
-      margin-top: 20px;
+  .yourmatch{
+      color: purple;
+      margin-left: -75%;
   }
-  .detailsForm label{
-      margin-left:-89%;
-      color:silver;
-      font-size:x-small;
-      font-weight: bold;
-  }
-.TimeButtons
+.submitbutton
 {
-    width:fit-content;
-    padding:3px;
-    border-radius: 8px;
-    background-color: white;
-    border-color: purple;
-    border-width:2px;
-    margin-right:12px;
-    margin-top:5px;
+    font-size: large;
+    margin-top: 30px;
+    margin-left: 20px;
+    font-weight: 600;
+    padding-top: 6px;
+    padding-bottom:6px;
+    padding-left: 10px;
+    border-radius: 20px;
+    border:none;
 }
-.TimeButtons:hover
-{
-    background-color: purple;
-    color: white;
+.offeredrides1{
+    margin-left: 30%;
+    margin-top: -1%;
+    display: none;
+    
 }
 .slider
 {
-    position:fixed;
+    position:absolute;
     cursor:pointer;
-    top:18%;left:16%;
+    margin-left: 65%;
+    margin-top: 1%;
     background-color: purple;
     transition: .4s;
     border-radius:25px;
     height:30px;
     width:60px;
-}
-.toggle
-{
-    position:relative;
-    display:inline-block;
-    width: fit-content;
-    height: fit-content;
-
 }
 .slider input {display:none}
 .slider:before{
@@ -117,14 +62,4 @@ input:checked+.slider
 input:checked+.slider::before
 {
     transform :translateX(30px);
-}
-
-button[type="submit"]
-{
-    font-size: large;
-    font-weight: 600;
-    padding-top: 6px;
-    padding-bottom:6px;
-    border-radius: 20px;
-    border:none;
 }

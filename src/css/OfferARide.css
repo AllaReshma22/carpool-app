@@ -1,130 +1,285 @@
-.Bookcard{
-    margin-Left:3%;
-    margin-top: 4%;
-    border:solid 1px;
-    z-index:99; 
-       border-Color:silver;
-       border-Radius:5px ;  
-       display:flex;
-       height:500px;
-       flex-Direction:column;
-       width:300px;
-       padding-Bottom:30px;
-       padding-Right:30px;
-       padding-Left:20px;
-}
-.logo{
-   position:relative;
-   left:-45vw;
-   top:2%;
-}
-.main{
-   background-image: url("../images/applicationbg.png");
-   z-index: -1;
-   background-repeat: no-repeat;
-   background-position: bottom;
-   height:99vh;
-}
-h2{
-   width:fitContent;height:fitContent; margin-Bottom:"0px";
-}
-.detailsForm{
-  display:flex;flex-Direction:column;margin-Top:15px;
-}
-.timings{
-   display:flex;flex-Wrap:wrap;margin-Top:10px;margin-Bottom:14px ; 
+body{
+   margin: 0;
+   padding: 0;
 }
 
-input
- {
-     margin-top:5px;
-     font-size:15px;
-     border:none;
-     border-bottom:silver solid 2px;
- }
- .detailsForm tagLine
- {
-   color:silver;
-     margin-left: -67%;
-     font-size:x-small;
-     font-weight: bold;
-     
- }
- input::placeholder { 
-   font-size:14px;
- }
- label{
-     margin-top: 20px;
- }
- .detailsForm label{
-     margin-left:-89%;
-     color:silver;
-     font-size:x-small;
-     font-weight: bold;
- }
-.TimeButtons1
-{
-   width:fit-content;
-   padding:3px;
-   border-radius: 8px;
+.flex{
+   display: flex;
+}
+
+.grid{
+   display: grid;
+}
+
+.icon{
+   position: absolute;
+   top: 2%;
+   left: 5%;
+}
+
+.icon img{
+   height: auto;
+   width: 80%;
+}
+
+.customerName{
+   text-align: center;
+   padding: 10px;
+   margin: 0;
+   margin-top: 10px;
+}
+
+.profile{
+   position: absolute;
+   top: 3%;
+   right: 3%;
+   color: black;
+}
+
+.profile img{
+   height: 50px;
+   width: 50px;
+   border-radius: 50%;
+}
+
+.profileSlides{
+   display: none;
+   position: absolute;
+   transition: 0.5s ease-in-out;
+   right: 3%;
+}
+
+.profileMenu{
    background-color: white;
-   border-color:purple;
-   border-width:2px;
-   margin-right:12px;
-   margin-top:5px;
+   border: 2px solid rgba(128, 128, 128, 0.181);
+   list-style: none;
+   padding: 0px;
+   border-radius: 5px;
+   transition: 0.5s ease-in-out;
 }
-.TimeButtons1:hover
-{
-   background-color:purple;
+
+.profileMenuItem{
+   text-decoration: none;
+   padding: 10px 5px 5px 5px;
+   color: rgba(128, 128, 128, 0.855);
+   width: 140px;
+   text-align: center;
+   cursor: pointer;
+   border: none;
+   border-bottom: 1px solid rgba(128, 128, 128, 0.17);
+}
+
+.profileMenuItem:last-child{
+   padding-bottom: 10px;
+}
+
+.profileMenuItem:hover{
    color: white;
+   background-color: rgba(118,83,252,255);
+   transition: 0.5s ease-in-out;
 }
+
+.book, .offer,.application{
+   height: 90vh;
+   width:97vw;
+   background-image: url("../images/applicationbg.png");
+   background-position: bottom;
+   background-repeat: no-repeat;
+   background-size: 80%;
+   margin-top: 100px;
+}
+
+.offer{
+   justify-content: space-around;
+}
+
+.newRide, .newRideDetails{
+  min-width: 280px;
+  position:absolute;
+  left: 5%;
+}
+
+.newRideDetails{
+   left: 40%;
+}
+
+.ridesContainer{
+   grid-template-columns: auto auto;
+}
+
+.newRide, .rideCard, .newRideDetails{
+   display: flex;
+   flex-direction: column;
+   border: 2px solid rgba(128, 128, 128, 0.192);
+   height: fit-content;
+   width: 300px;
+   padding: 20px 20px 15px 20px;
+   background-color: white;
+   border-radius: 8px;
+   font-size: 14px;
+   color: gray;
+   line-height: 80%;
+}
+
+.newRideDetails{
+   display: none;
+}
+
+.newRide h1,.newRideDetails h1{
+   color: black;
+
+
+}
+.firstpart{
+   
+}
+.newRide label{
+   margin-left:-89%;
+   color:silver;
+   font-size:x-small;
+   font-weight: bold;
+}
+.newRide input, .newRideDetails input{
+   border-bottom: 1px solid silver;
+   padding: 10px;
+   border-radius: 0;
+   width: 90%;
+}
+
+.newRide form, .newRideDetails form{
+   padding-top: 50px;
+   line-height: 100%;
+}
+
+#cardNext, #cardSubmit{
+   color: blueviolet;
+   font-weight: bold;
+   padding: 12px 25px 12px 25px;
+   margin-top: 30px;
+   border-radius: 20px;
+   border:none;
+   background-color: white;
+   
+}
+
+#cardNext:hover{
+   background-color: blueviolet;
+   color: white;
+   transition: 0.5s ease-in-out;
+}
+
+input:focus{
+   outline: none;
+   border-bottom: 1.5px solid rgba(74,144,226,255);
+}
+
+#seats{
+   margin-top: 10px;
+}
+
+.priceContainer{
+   margin-left: 50px;
+   width: 100px;
+}
+
+.priceContainer input{
+   margin: 15px 0px;
+}
+
+
+#timeSlots button, #seats button{
+   font-size: 14px !important;
+   width: 90px;
+   height: 25px;
+   border-radius: 15px;
+   border: 1px solid blueviolet;
+   color: blueviolet;
+   background-color: white;
+   margin: 5px;
+   float: left;
+}
+
+#seats button{
+   width: 35px;
+   height: 35px;
+   border-radius: 50%;
+   font-weight: bold;
+   font-size: 16px !important;
+}
+
+#timeSlots button:hover, #seats button:hover{
+   border: 2px solid blueviolet;
+   font-weight: bold;
+}
+
+.matches{
+   flex-direction: column;
+   margin: 20px;
+   margin-left: 30%;
+   min-width: 500px;
+}
+
+.matches h2{
+   color: blueviolet;
+   margin:0px 0px 0px 50px;
+}
+
+.rideCard{
+   margin: 10px;
+   flex-direction: column;
+   width:450px
+}
+.rideperson{
+   padding-left:-20%;
+   
+}
+
+.cardDetails{
+   justify-content: space-between;
+   line-height: normal !important;
+}
+
+.cardDetails label{
+   font-size: 16px;
+   color: black;
+}
+.newRide h3{
+   color:silver;
+   font-size:small;
+   font-weight: bold;
+   margin-left: -38%;
+}
+
 .slider1
 {
-   position:fixed;
-   cursor:pointer;
-   top:18%;left:16%;
-   background-color: orange;
-   transition: .4s;
-   border-radius:25px;
-   height:30px;
-   width:60px;
-}
-.toggle
-{
-   position:relative;
-   display:inline-block;
-   width: fit-content;
-   height: fit-content;
-
+    position:absolute;
+    cursor:pointer;
+    margin-left: 65%;
+    margin-top: 1%;
+    background-color: orange;
+    transition: .4s;
+    border-radius:25px;
+    height:30px;
+    width:60px;
 }
 .slider1 input {display:none}
 .slider1:before{
-   position: absolute;
-   content:'';
-   background-color: white;
-   transition:0.4s;
-   height:24px;
-   width:24px;
-   bottom:3px;
-   border-radius:40px;
+    position: absolute;
+    content:'';
+    background-color: white;
+    transition:0.4s;
+    height:24px;
+    width:24px;
+    bottom:3px;
+    border-radius:40px;
 }
 
 input:checked+.slider1
 {
-   background-color: purple;
+    background-color:purple;
 }
 
 input:checked+.slider1::before
 {
-   transform :translateX(30px);
-}
-
-button[type="submit"]
-{
-   font-size: large;
-   font-weight: 600;
-   padding-top: 6px;
-   padding-bottom:6px;
-   border-radius: 20px;
-   border:none;
+    transform :translateX(30px);
 }

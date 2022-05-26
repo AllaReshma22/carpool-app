@@ -1,21 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../css/OptionsPage.css'
-import {Link} from 'react-router-dom';
-class OptionsPage extends Component 
+import {Link,useLocation} from 'react-router-dom';
+
+
+function OptionsPage() 
 {
     
-    render(){
     return<>
         <div className="Page">
         <div style={{display:"flex",justifyContent:"space-between", height:"40px",marginTop:"20px",marginLeft:"40px",marginRight:"40px"}}>
             <img src={require("../images/logo.png")}alt="" style={{height:"65px"}} />
             <div style={{display:"flex",flexDirection:"row"}}>
-            <p style={{fontSize:"20px",fontWeight:"bold",alignSelf:"center"}} >{this.state.name}</p>
+            <p style={{fontSize:"20px",fontWeight:"bold",alignSelf:"center"}} >Reshma </p>
             <img src = {require("../images/user-profile.png")} alt="" style={{height:"50px",width:"50px", alignSelf:"center"}}/>
             </div>
         </div>
         <div style={{margin:"auto", width:"45%"}}>
-                <p style={{fontWeight:"bold", fontSize:"40px",width:"fit-content",left:"500%"}} >Hey john!</p>
+                <p style={{fontWeight:"bold", fontSize:"40px",width:"fit-content",left:"500%"}} >Hey reshma!</p>
                 <div>
                 <Link to="/BookARide" className="bookRideBtn">Book a ride</Link>
                 <Link to="/OfferARide" className="offerRideBtn">Offer a ride</Link>
@@ -25,5 +26,5 @@ class OptionsPage extends Component
         </div>
     </>
 }
-}
+
 export default OptionsPage

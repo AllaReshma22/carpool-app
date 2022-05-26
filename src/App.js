@@ -1,11 +1,12 @@
 
 import './App.css';
-
+import AllRides from './components/AllRides'
 import SignUp from './components/SignUp'
 import Login from './components/Login'
 import Options from './components/OptionsPage'
 import BookARide from './components/BookARide'
 import OfferARide from './components/OfferARide'
+import RideCard from './components/RideCard';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
@@ -13,10 +14,12 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 function App() {
   var Data=[
     {
+        Name:'reshma',
         email:'reshma@gmail.com',
         password:'reshma@123'
     },
     {
+        Name:'spider',
         email:'spider@gmail.com',
         password:'spider@123'
     }
@@ -28,7 +31,7 @@ function App() {
       To:'Cincinatti',
       Date:'xx/mm/yyyy',
       Time:'5am-9am',
-      Price:'95$',
+      Price:'95',
       Seats:'01',
     },
     {
@@ -37,7 +40,7 @@ function App() {
       To:'Cincinatti',
       Date:'xx/mm/yyyy',
       Time:'5am-9am',
-      Price:'220$',
+      Price:'220',
       Seats:'02',
     }
   ]
@@ -48,7 +51,7 @@ function App() {
         To:'Secaucus',
         Date:'xx/mm/yyyy',
         Time:'6pm-9pm',
-        Price:'150$',
+        Price:'150',
         Seats:'01',
       },
       {
@@ -57,7 +60,7 @@ function App() {
         To:'Madisson,Wisconsin',
         Date:'xx/mm/yyyy',
         Time:'6pm-9pm',
-        Price:'700$',
+        Price:'700',
         Seats:'02',
       }
     
@@ -67,11 +70,15 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path='/' exact element={<SignUp Data={Data}></SignUp>} />
+          <Route path='/' exact element={<SignUp  Data={Data}></SignUp>} />
           <Route path='/Login' element={<Login Data={Data}></Login>} />
           <Route path='/OptionsPage' element={<Options Data={Data}></Options>}/>
-          <Route path='/BookARide'element={<BookARide Data={Data}></BookARide>}/>
-          <Route path='/OfferARide'element={<OfferARide Data={Data}></OfferARide>}/>
+          <Route path='/BookARide'element={<BookARide  OfferedRides={OfferedRides} BookedRides={BookedRides} Data={Data}></BookARide>}/>
+          <Route path='/OfferARide'element={<OfferARide  OfferedRides={OfferedRides} BookedRides={BookedRides} Data={Data}></OfferARide>}/>
+          
+          <Route path='/AllRides'element={<AllRides OfferedRides={OfferedRides} BookedRides={BookedRides} Data={Data}></AllRides> }/>
+          <Route path='/Rides'element={<RideCard OfferedRides={OfferedRides} BookedRides={BookedRides} Data={Data}></RideCard> }/>
+
         </Routes>
       </BrowserRouter>
       

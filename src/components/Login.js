@@ -20,7 +20,7 @@ class Login extends Component {
         [e.target.name]:e.target.value
         }
         )
-        e.preventDefault()
+        e.preventDefault();
 
     }
     HandleSubmit=(e)=>
@@ -39,6 +39,7 @@ class Login extends Component {
         
         if(flag===1)
         {
+            console.log(this.state.email);
             this.setState(
                 {
                 message:'Login Succesful'
@@ -68,7 +69,7 @@ class Login extends Component {
                    <div class="loginUpForm flex"> 
                         <br></br>
                         <br></br>
-                        <div className='success-message'><Link to='/OptionsPage' name={this.state.email}>{this.state.message}</Link></div>
+                        <div className='success-message'><Link to={{pathname:'/OptionsPage',state:{name:this.state.email}}}>{this.state.message}</Link></div>
                         <br></br>
                         
                         <h2 className='sign-up'><b>Log In</b></h2>

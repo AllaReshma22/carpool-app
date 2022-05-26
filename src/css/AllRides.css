@@ -1,0 +1,34 @@
+.BookedRidesButton{
+    background-color: blueviolet;
+    position: absolute;
+    margin-left: -7%;
+    padding: 10px;
+    border: 0;
+    border-radius: 10px;
+    color: white;
+    font-size: 26px;
+    text-decoration: none;
+
+}
+.OfferedRidesButton{
+    background-color:orange;
+position: absolute;
+
+margin-left: -3%;
+padding: 10px;
+border: 0;
+border-radius: 10px;
+color: white;
+font-size: 26px;
+text-decoration: none;
+
+}
+.rides{
+    margin-top: 12%;
+    margin-left: 18%;
+    
+}
+.offeredrides{
+    margin-top: 12%;
+    margin-left: 37%;
+}
