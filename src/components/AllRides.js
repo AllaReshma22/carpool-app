@@ -4,9 +4,6 @@ import "../css/AllRides.css"
 import ProfileComponent from "./ProfileComponent"
 import RideCard from "./RideCard";
 class AllRides extends Component{
-    constructor(props){
-        super(props);
-    }
     renderBookedRides(){
     if (this.props.BookedRides.length < 1) {
       return (

@@ -73,7 +73,7 @@ class OfferARide extends Component
     }
     handleSubmit=(e)=>{
        this.ActiveSeats();
-       this.props.OfferedRides.push({"from":this.state.Source,"to":this.state.Destination,"date":this.state.Date,"price":this.state.Price,"seats":SeatsAvailable,"time":this.state.Time})
+       this.props.OfferedRides.push({"Name":"demo","From":this.state.Source,"To":this.state.Destination,"Date":this.state.Date,"Price":this.state.Price,"Seats":SeatsAvailable,"Time":this.state.Time})
         console.log(this.state.Source,this.state.Destination,this.state.Date,this.state.Price,this.state.Time,SeatsAvailable)
     }
     
@@ -124,7 +124,7 @@ class OfferARide extends Component
                                 <input type="number" id="number" onChange={this.Price}/>
                             </div>
                         </div>
-                        <button type="button"style={{ marginleft:"45%",color:"white",backgroundColor:"orange",width:"100px",borderColor:"green"}}onClick={this.handleSubmit}>Submit</button>
+                        <button type="button"style={{ marginleft:"45%",color:"white",backgroundColor:"orange",width:"100px",borderColor:"green"}} className="submitbutton" onClick={this.handleSubmit}>Submit</button>
                     </form>
                 </div>
             </div>

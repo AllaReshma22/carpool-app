@@ -57,7 +57,7 @@ function App() {
       {
         Name:'Chris Ween',
         From:'Kansas',
-        To:'Madisson,Wisconsin',
+        To:'Madisson',
         Date:'xx/mm/yyyy',
         Time:'6pm-9pm',
         Price:'700',

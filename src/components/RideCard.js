@@ -6,20 +6,21 @@ const OfferedRideCard = (props) => {
             <h1 className="rideperson">{props.Name}</h1>
             <div className="cardDetails flex">
                 <div className="firstPart">
-                    <label>From</label><br/>
-                    {props.From}<br/><br/>
-                    <label>Date</label><br/>
-                    <label id="date">{props.Date}</label><br/><br/>
-                    <label>Price</label><br/>
-                    <label id="price">{props.Price} &#36; </label><br/>
+                    <label className="leftlabel">From</label>
+                    <h4 className="lefttext" >{props.From}</h4>
+                    <label className="leftlabel">Date</label>
+                     <h4 className="lefttext" >{props.Date}</h4>
+                    <label className="leftlabel">Price</label>
+                    <h4 className="lefttext" >{props.Price}&#36;</h4>
                 </div>
+                <div style={{width:"50%"}}></div>
                 <div className="secondPart">
-                    <label>To</label><br/>
-                    <label id="to">{props.To}</label><br/><br/>
-                   <label>Time</label><br/>
-                    <label id="time">{props.Time}</label><br/><br/>
-                    <label>Seats</label><br/>
-                    <label id="seats">{props.Seats}</label><br/>
+                    <label className="rightlabel">To</label>
+                    <h4 className="righttext" >{props.To}</h4>
+                   <label className="rightlabel">Time</label>
+                   <h4 className="righttext" >{props.Time}</h4>
+                    <label className="rightlabel">Seats</label>
+                    <h4 className="righttext" >{props.Seats}</h4>
                 </div>
             </div>
         </div>

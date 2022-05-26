@@ -130,9 +130,6 @@ body{
 
 
 }
-.firstpart{
-   
-}
 .newRide label{
    margin-left:-89%;
    color:silver;
@@ -227,22 +224,46 @@ input:focus{
 .rideCard{
    margin: 10px;
    flex-direction: column;
-   width:450px
+   width:450px;
+   height: 300px;
 }
 .rideperson{
-   padding-left:-20%;
+   text-align: left;
    
 }
+.lefttext{
+   text-align: left;
+   font-size: 16px;
+   color: black;
+   font-weight: lighter;
 
+}
+.righttext{
+   text-align: left;
+   font-size: 16px;
+   color: black;
+   font-weight: lighter;
+  
+}
+.leftlabel{
+   margin-left: -50%;
+}
+.rightlabel{
+   margin-left: -49%;
+}
+ 
 .cardDetails{
-   justify-content: space-between;
    line-height: normal !important;
+   justify-content:;
 }
 
 .cardDetails label{
    font-size: 16px;
-   color: black;
+   color:silver;
+  
+   text-align: left;
 }
+
 .newRide h3{
    color:silver;
    font-size:small;
