@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import "../css/BookARide.css";
 import HomeComponent from "./HomeComponent";
 import ProfileComponent from "./ProfileComponent";
-import MatchesComponent from "./Matches";
 import RideCard from "./RideCard";
 function Activator(id,selectedTime){
     var ele = document.getElementById(id).childNodes
@@ -19,7 +18,6 @@ function Activator(id,selectedTime){
     
 }
 const TimeMapper =  {"5am-9am":1,"9am-12pm":2,"12pm-3pm":3,"3pm-6pm":4,"6pm-9pm":5};
-const seats=1;
 class BookARide extends Component
 {
     constructor(props) {
