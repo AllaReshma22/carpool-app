@@ -1,30 +1,43 @@
-import React from 'react';
+import React, { Component } from 'react';
 import '../css/OptionsPage.css'
 import {Link} from 'react-router-dom';
+import HomeComponent from "../components/HomeComponent";
+import ProfileComponent from "../components/ProfileComponent";
 
 
-function optionsPage() 
+class OptionsPage extends Component
 {
-    
-    return<>
-        <div className="Page">
-        <div style={{display:"flex",justifyContent:"space-between", height:"40px",marginTop:"20px",marginLeft:"40px",marginRight:"40px"}}>
-            <img src={require("../images/logo.png")}alt="" style={{height:"65px"}} />
-            <div style={{display:"flex",flexDirection:"row"}}>
-            <p style={{fontSize:"20px",fontWeight:"bold",alignSelf:"center"}} >Reshma </p>
-            <img src = {require("../images/user-profile.png")} alt="" style={{height:"50px",width:"50px", alignSelf:"center"}}/>
-            </div>
-        </div>
-        <div style={{margin:"auto", width:"45%"}}>
-                <p style={{fontWeight:"bold", fontSize:"40px",width:"fit-content",left:"500%"}} >Hey reshma!</p>
+    constructor(props){
+        super(props);
+        this.state = {
+            email: window.localStorage.getItem('email'),
+            password:'',
+            id: window.localStorage.getItem('id')
+        };
+    }
+
+    handleLogout = event =>{
+        window.localStorage.clear();
+    }
+    render(){  
+    return(
+        
+        <div>
+               <HomeComponent/>
+                <ProfileComponent/>
+            
+       
+            <div style={{margin:"auto", width:"45%"}}>
+                <p style={{fontWeight:"bold", fontSize:"40px",width:"fit-content",left:"500%"}} >Hey { this.state.email.substring(0, this.state.email.indexOf('@')) || "test"}!</p>
                 <div>
                 <Link to="/BookARide" className="bookRideBtn">Book a ride</Link>
                 <Link to="/OfferARide" className="offerRideBtn">Offer a ride</Link>
                 </div>
-        </div>
+            </div>
         <img src={require("../images/rideoptionsbg.png")} alt="" style={{height:"60%", zIndex:-1,width:"100vw", marginTop:"11%"}}/>
         </div>
-    </>
+    )
+    }
 }
 
-export default optionsPage
+export default OptionsPage

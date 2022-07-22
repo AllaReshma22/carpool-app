@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import bg from '../images/img1.png'
 import '../css/SignUp.css'
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import axios from'axios';
+import { withRouter } from 'react-router-dom'
 class SignUp extends Component {
     constructor(props)
     {
@@ -40,7 +42,30 @@ class SignUp extends Component {
         );
         }
         e.preventDefault();
-        this.props.Data.push({'email':this.state.email,'password':this.state.password})
+        axios(
+            {
+            method: 'post',
+            url: 'https://localhost:44348/api/UserService/create',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                "Acces-Control-Allow-Origin": "*"
+              },
+            data: {
+                "EmailId": this.state.email,
+                "Password": this.state.password,
+
+            }
+          }).then(function (response) {
+              if(response.data != null){
+                this.props.history.push('/Login')
+              }
+              else{
+                  window.alert("something went wrong")
+              }
+          }).catch(error => {
+           window.alert(error.response.data)
+          });
         e.preventDefault();
         
     }
@@ -126,4 +151,4 @@ class SignUp extends Component {
         );
     }
 }
-export default SignUp;
+export default withRouter(SignUp)

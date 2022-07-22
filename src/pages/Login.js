@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
 import bg from '../images/img1.png'
 import '../css/Login.css';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import axios from 'axios';
 class Login extends Component {
     constructor(props)
     {
         super(props);
         this.state=
         {
+                email:'',
+                password:'',
+                id:'',
             message:''
         }
         
@@ -25,38 +29,37 @@ class Login extends Component {
     }
     handleSubmit=(e)=>
     {
+        var self=this;
         
-        
-        let flag=0;
-        e.preventDefault();
-        Object.entries(this.props.Data).map(([key,value]) =>{
-            
-            if((value.email===this.state.email)&&(value.password===this.state.password))
+        axios(
             {
-                flag=1
+            method: 'post',
+            url:'https://localhost:44348/api/UserService/Login',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                "Acces-Control-Allow-Origin": "*"
+              },
+            data: {
+                "EmailId": this.state.email,
+                "Password": this.state.password
             }
-        })
-        
-        if(flag===1)
-        {
-            console.log(this.state.email);
-            this.setState(
-                {
-                message:'Login Succesful'
-                }
+          }).then(function (response) {
 
-            )
-        }
-        else
-        {
-            this.setState(
-                {
-                message:'Invalid Credentials'
-                }
-
-            )
-
-        }
+            console.log("response"+JSON.stringify(response.data));
+            if(response.data !== "")
+            {
+                console.log('final email :' + self.state.email)
+                console.log('final pass  :'+  self.state.password)
+                window.localStorage.setItem('id',response.data);
+                window.localStorage.setItem('email',self.state.email);
+                self.setState({message:"Login Succesful"})
+            }
+            else{
+                window.alert("User Not found.. Sign up ??")
+            }
+          });
+    
         e.preventDefault();
     }
    

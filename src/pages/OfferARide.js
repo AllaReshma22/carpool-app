@@ -3,6 +3,7 @@ import "../css/OfferARide.css";
 import HomeComponent from "../components/HomeComponent";
 import ProfileComponent from "../components/ProfileComponent";
 import {Link} from 'react-router-dom';
+import axios from 'axios';
 function Activator(id,selectedTime){
     var ele = document.getElementById(id).childNodes
     for(var i=0; i<ele.length; i++){
@@ -26,6 +27,8 @@ class OfferARide extends Component
     constructor(props) {
         super(props);
         this.state = {
+            email: window.localStorage.getItem('email'),
+            id: window.localStorage.getItem('id'),
             Source:'',
             Destination:'',
             Time:0,
@@ -74,8 +77,36 @@ class OfferARide extends Component
     }
     handleSubmit=(e)=>{
        this.ActiveSeats();
-       this.props.OfferedRides.push({"Name":"demo","From":this.state.Source,"To":this.state.Destination,"Date":this.state.Date,"Price":this.state.Price,"Seats":SeatsAvailable,"Time":this.state.Time})
-        console.log(this.state.Source,this.state.Destination,this.state.Date,this.state.Price,this.state.Time,SeatsAvailable)
+   
+        axios(
+        {
+            method:"POST",
+            url:'https://localhost:44348/api/Rides/offerride',
+            headers:{
+                'Accept': '*/*',
+                'Content-Type': 'application/json',
+                "Acces-Control-Allow-Origin": "*"
+            },
+            data:{
+                "Source" : this.state.Source.toLowerCase(),
+                "Destination" : this.state.Destination.toLowerCase(),
+                "Price" : this.state.Price,
+                "OwnerId":this.state.id,
+                "BookingDate" : this.state.Date,
+                "TimeSlot" : this.state.Time,
+              
+                "AvailableSeats" : SeatsAvailable
+            }
+        }).then(function(response){
+            if(response.data != null){
+                window.alert("Ride added succesfully....")
+              }
+              else{
+                  window.alert("something went wrong")
+              }
+          }).catch(error => {
+           window.alert(error.response.data)
+          });
     }
     
     render(){
